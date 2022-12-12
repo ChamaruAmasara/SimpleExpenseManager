@@ -2,15 +2,17 @@ package lk.ac.mrt.cse.dbs.simpleexpensemanager.control;
 
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.AccountDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.TransactionDAO;
-import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.InMemoryAccountDAO;
-import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.InMemoryTransactionDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistentAccountDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistentTransactionDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Account;
 
-public class PersistentExpenseManager extends ExpenseManager{
+public class PersistentDemoExpenseManager extends ExpenseManager{
+    private DatabaseHelper db;
 
-    public PersistentExpenseManager() {
+
+    public PersistentDemoExpenseManager(DatabaseHelper db) {
+
+        this.db = db;
         setup();
     }
 
@@ -18,10 +20,10 @@ public class PersistentExpenseManager extends ExpenseManager{
     public void setup() {
         /*** Begin generating dummy data for persistent implementation ***/
 
-        TransactionDAO persistentTransactionDAO = new PersistentTransactionDAO();
+        TransactionDAO persistentTransactionDAO = new PersistentTransactionDAO(db);
         setTransactionsDAO(persistentTransactionDAO);
 
-        AccountDAO persistentAccountDAO = new PersistentAccountDAO();
+        AccountDAO persistentAccountDAO = new PersistentAccountDAO(db);
         setAccountsDAO(persistentAccountDAO);
 
         // dummy data
