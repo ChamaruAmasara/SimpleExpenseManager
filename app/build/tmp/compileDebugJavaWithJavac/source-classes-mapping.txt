@@ -35,3 +35,10 @@ lk/ac/mrt/cse/dbs/simpleexpensemanager/control/InMemoryDemoExpenseManager.java
 lk/ac/mrt/cse/dbs/simpleexpensemanager/data/impl/InMemoryAccountDAO.java
  lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.InMemoryAccountDAO
  lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.InMemoryAccountDAO$1
+lk/ac/mrt/cse/dbs/simpleexpensemanager/control/PersistentExpenseManager.java
+ lk.ac.mrt.cse.dbs.simpleexpensemanager.control.PersistentExpenseManager
+lk/ac/mrt/cse/dbs/simpleexpensemanager/data/impl/PersistentTransactionDAO.java
+ lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistentTransactionDAO
+lk/ac/mrt/cse/dbs/simpleexpensemanager/data/impl/PersistentAccountDAO.java
+ lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistentAccountDAO
+ lk.ac.mrt.cse.dbs.simpleexpensemanager.data.impl.PersistentAccountDAO$1
